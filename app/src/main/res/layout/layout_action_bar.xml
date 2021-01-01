@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     xmlns:tool="http://schemas.android.com/tools"
     tool:background="@color/colorPrimary"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text_view_toolbar_name"
-        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+    <ImageButton
+        android:id="@+id/action_bar_message"
+        android:src="@drawable/ic_message"
+        android:background="@android:color/transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/action_bar_title"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:text="Title"
         android:textColor="@android:color/white" />
 
-</LinearLayout>
+</RelativeLayout>
